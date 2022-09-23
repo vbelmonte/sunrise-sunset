@@ -46,7 +46,7 @@ main {
 }
 
 .main-info {
-    width: 700px;
+    width: 800px;
 }
 
 .location-date, .sunrise-sunset {
@@ -54,7 +54,12 @@ main {
     justify-content: space-between;
 }
 
-.sunrise-sunset > div, .location-date > div {
+.sunrise-sunset > div:first-child {
+    display: flex;
+    gap: 30px;
+}
+
+.location-date > div:first-child {
     display: flex;
     gap: 30px;
 }
