@@ -1,27 +1,3 @@
-let weekday = new Array(7);
-        weekday[0] = "SUN";
-        weekday[1] = "MON";
-        weekday[2] = "TUE";
-        weekday[3] = "WED";
-        weekday[4] = "THU";
-        weekday[5] = "FRI";
-        weekday[6] = "SAT";
-
-var month = new Array();
-        month[0] = "JAN";
-        month[1] = "FEB";
-        month[2] = "MAR";
-        month[3] = "APR";
-        month[4] = "May";
-        month[5] = "JUN";
-        month[6] = "JUL";
-        month[7] = "AUG";
-        month[8] = "SEP";
-        month[9] = "OCT";
-        month[10] = "NOV";
-        month[11] = "DEC";
-
-
 function getCurrentTime() {
     let currentTimeDate = new Date();
     let hours = currentTimeDate.getHours();
@@ -29,6 +5,12 @@ function getCurrentTime() {
     let seconds = currentTimeDate.getSeconds();
     let AMPM = null;
 
+    if (hours >= 12) {
+        AMPM = "PM";
+    }
+    else {
+        AMPM = "AM";
+    }
     if (hours === 12) {
         hours = 12;
     
@@ -45,14 +27,8 @@ function getCurrentTime() {
         minutes = minutes;
     }
 
-    if (hours >= 12) {
-        AMPM = "PM";
-    }
-    else {
-        AMPM = "AM";
-    }
-
     let currentTime = `${hours}:${minutes} ${AMPM}`;
+    
     setTimeout(getCurrentTime, 500);
 
     document.getElementById("current-time").innerHTML = currentTime;
@@ -60,4 +36,45 @@ function getCurrentTime() {
     return currentTime;
 }
 
+function getCurrentDate() {
+    let currentTimeDate = new Date();
+
+    let weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+    let month = new Array();
+        month[0] = "January";
+        month[1] = "February";
+        month[2] = "March";
+        month[3] = "April";
+        month[4] = "May";
+        month[5] = "June";
+        month[6] = "July";
+        month[7] = "August";
+        month[8] = "September";
+        month[9] = "October";
+        month[10] = "November";
+        month[11] = "December";
+
+    let currentDay = weekday[currentTimeDate.getDay()];
+    let currentDate  = currentTimeDate.getDate();
+    let currentMonth = month[currentTimeDate.getMonth()];
+    let currentYear = currentTimeDate.getFullYear();
+    let fullDate = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear}`;
+
+    setTimeout(getCurrentDate, 500);
+
+    document.getElementById("current-date").innerHTML = fullDate;
+
+    return fullDate;
+    
+}
+
 getCurrentTime();
+getCurrentDate();
