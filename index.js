@@ -1,3 +1,5 @@
+let objData = null;
+
 function getCurrentTime() {
     let currentTimeDate = new Date();
     let hours = currentTimeDate.getHours();
@@ -75,6 +77,39 @@ function getCurrentDate() {
     return fullDate;
     
 }
+
+function getAllData() {
+    let request = new XMLHttpRequest();
+    request.open("GET", "https://api.sunrise-sunset.org/json?lat=32.715700&lng=-117.161087");
+    request.send();
+
+    request.onload = function() {
+        objData = JSON.parse(request.responseText);
+    };
+}
+
+function retrieveData() {
+    return objData;
+}
+
+function getSunriseTime() {
+    let data = retrieveData();
+    return data.results.sunrise;
+}
+
+function getSunsetTime() {
+    let data = retrieveData();
+    return data.results.sunset;
+}
+
+function getDayLength() {
+    let data= retrieveData();
+    return data.results.day_length;
+}
+
+
+
+
 
 getCurrentTime();
 getCurrentDate();

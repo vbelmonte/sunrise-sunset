@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Sunrise/Sunset Times</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,13 +14,14 @@
         <header>
             <h1>Sunrise/Sunset Times</h1>
         </header>
-        <hr>
+        <hr class="hr-header">
         <main>
             <div class="main-info">
                 <div class="location-date">
                     <div>
-                        <div class="icon-text" id="location-name" title="Your current city">
-                            <img class="ld-icon" src="images-and-icons/pin-map-fill.svg">San Diego
+                        <div class="icon-text input" id="location-name" title="Your current city">
+                            <label for="location"><img class="ld-icon" src="images-and-icons/pin-map-fill.svg"></label>
+                            <input type="text" id="location" name="location">
                         </div>
                         <div class="icon-text" id="location-coordinates" title="Your current coordinates">
                             <img class="ld-icon" src="images-and-icons/globe2.svg">32.7157° N, 117.1611° W
@@ -30,9 +31,11 @@
                         <img class="ld-icon" src="images-and-icons/calendar2-event.svg"><span id="current-date">9/2/2022</span>
                     </div>
                 </div>
+                <hr>
                 <div class="time">
                     <h2 id="current-time"></h2>
                 </div>
+                <hr>
                 <div class="sunrise-sunset">
                     <div>
                         <div class="icon-text" id="sunrise-time" title="Sunrise time">
