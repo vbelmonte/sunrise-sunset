@@ -135,3 +135,13 @@ input:hover {
 input:focus-visible {
     outline: none;
 }
+
+input::placeholder {
+    font-size: 10px;
+    color: white;
+    text-transform: none;
+}
+
+#location {
+    width: 250px;
+}

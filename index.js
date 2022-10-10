@@ -78,14 +78,34 @@ function getCurrentDate() {
     
 }
 
-function getAllData() {
+function getAllData(lat, long) {
     let request = new XMLHttpRequest();
-    request.open("GET", "https://api.sunrise-sunset.org/json?lat=32.715700&lng=-117.161087");
+    request.open("GET", "https://api.sunrise-sunset.org/json?lat=" + lat + "&lng=" + long);
     request.send();
 
     request.onload = function() {
+        /** We want this function to post all the data to the user's screen */
         objData = JSON.parse(request.responseText);
+        postData(objData);
     };
+}
+
+function getCoordinatesByPostalCode(input) {
+    let request = new XMLHttpRequest();
+    let link = "http://api.openweathermap.org/geo/1.0/zip?zip=" + input + "&appid=";
+
+    request.open("GET", link);
+    request.send();
+
+    request.onload = function() {
+        let result = JSON.parse(request.responseText);
+        getAllData(result.lat, result.lon);
+    }
+}
+
+
+function postData(input) {
+    
 }
 
 function retrieveData() {
