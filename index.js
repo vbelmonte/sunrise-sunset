@@ -1,4 +1,5 @@
 let objData = null;
+let apiKey = null;
 
 function getCurrentTime() {
     let currentTimeDate = new Date();
