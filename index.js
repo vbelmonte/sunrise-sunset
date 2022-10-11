@@ -128,6 +128,10 @@ function getDayLength() {
     return data.results.day_length;
 }
 
+function getTimeZone() {
+    
+}
+
 
 
 

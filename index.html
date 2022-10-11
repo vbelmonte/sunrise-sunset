@@ -16,6 +16,37 @@
         </header>
         <hr class="hr-header">
         <main>
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <h1 class="hello">Hello</h1>
+                    <h3>Enter your zip code, country code, and API keys below to continue.</h3>
+                    <form>
+                        <div class="location">
+                            <div>
+                                <label class="auth" for="zipcode">Zip Code</label>
+                                <input class="auth" type="tel" id="zipcode">
+                            </div>
+                            <div>
+                                <label class="auth" for="countrycode">Country Code</label>
+                                <input class="auth" type="text" id="countrycode">
+                            </div>
+                        </div>
+                        <div class="api-keys">
+                            <label class="auth" for="openweather">OpenWeather API Key</label>
+                            <input class="auth" type="text" id="openweather">
+                            <label class="auth" for="timezonedb">TimeZoneDB API Key</label>
+                            <input class="auth" type="text" id="timezonedb">
+                        </div>
+                        <div class="submit">
+                            <button type="button" class="auth">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            
+            </div>
             <div class="main-info">
                 <div class="location-date">
                     <div>
