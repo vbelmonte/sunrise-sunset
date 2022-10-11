@@ -57,6 +57,14 @@ main {
     height: calc(100vh - 75px - 114px);
 }
 
+.authorization {
+    display: block;
+}
+
+.authorization-content {
+    padding: 2rem;
+}
+
 .main-info {
     display: none;
     width: 800px;

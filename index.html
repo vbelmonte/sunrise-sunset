@@ -16,11 +16,11 @@
         </header>
         <hr class="hr-header">
         <main>
-            <!-- The Modal -->
-            <div class="modal" id="myModal">
+            <!-- The Authorization Section -->
+            <div class="authorization">
 
-                <!-- Modal content -->
-                <div class="modal-content">
+                <!-- Authorization -->
+                <div class="authorization-content">
                     <h1 class="hello">Hello</h1>
                     <h3>Enter your zip code, country code, and API keys below to continue.</h3>
                     <form>
@@ -41,7 +41,7 @@
                             <input class="auth" type="text" id="timezonedb">
                         </div>
                         <div class="submit">
-                            <button type="button" class="auth">Submit</button>
+                            <button type="button" class="auth" onclick="authorize()">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -89,4 +89,5 @@
         
     </body>
     <script src="index.js"></script>
+    <script src="animations.js"></script>
 </html>
