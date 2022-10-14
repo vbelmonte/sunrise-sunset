@@ -27,11 +27,11 @@
                         <div class="location">
                             <div>
                                 <label class="auth" for="zipcode">Zip Code</label>
-                                <input class="auth" type="tel" id="zipcode">
+                                <input class="auth" type="tel" id="zipcode" placeholder="eg. 92111" pattern="\d{4,10}">
                             </div>
                             <div>
                                 <label class="auth" for="countrycode">Country Code</label>
-                                <input class="auth" type="text" id="countrycode">
+                                <input class="auth" type="text" id="countrycode" placeholder="eg. US">
                             </div>
                         </div>
                         <div class="api-keys">
@@ -50,7 +50,7 @@
             <div class="main-info">
                 <div class="location-date">
                     <div>
-                        <div class="icon-text input" id="location-name" title="Your current city">
+                        <div class="icon-text" id="location-name" title="Your current city">
                             <label for="location"><img class="ld-icon" src="images-and-icons/pin-map-fill.svg"></label>
                             <input type="text" id="location" placeholder="Enter postal code and country code (eg. 92111, US)" name="location">
                         </div>

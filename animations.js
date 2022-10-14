@@ -1,3 +1,3 @@
-function authorize() {
+/*function authorize() {
     console.log("click!");
-}
+}*/
