@@ -133,9 +133,28 @@ function getTimeZone() {
 }
 
 function authorize() {
-        
+    let authorizationWindow = document.getElementsByClassName("authorization");
+    authorizationWindow[0].style.opacity = 0;
+    setTimeout(hideAuthorizationWindow, 1000);
+    setTimeout(displayDashboard, 1500);
 }
 
+function displayDashboard() {
+    let dashboard = document.getElementsByClassName("main-info");
+    dashboard[0].style.display = "block";
+    setTimeout(displayDashboardOpacity, 500);
+    /*dashboard[0].style.opacity = 1;*/
+}
+
+function displayDashboardOpacity() {
+    let dashboard = document.getElementsByClassName("main-info");
+    dashboard[0].style.opacity = 1;
+}
+
+function hideAuthorizationWindow() {
+    let authorizationWindow = document.getElementsByClassName("authorization");
+    authorizationWindow[0].style.display = "none";
+}
 
 
 

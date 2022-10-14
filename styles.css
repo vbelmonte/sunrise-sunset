@@ -59,6 +59,8 @@ main {
 
 .authorization {
     display: block;
+    opacity: 1;
+    transition: opacity 0.2s linear;
 }
 
 .authorization-content {
@@ -67,7 +69,9 @@ main {
 
 .main-info {
     display: none;
+    opacity: 0;
     width: 800px;
+    transition: opacity 0.2s linear;
 }
 
 .location-date, .sunrise-sunset {
@@ -176,6 +180,7 @@ input:focus-visible {
 
 input::placeholder {
     color: rgba(255,255,255,0.5);
+    font-size: 0.7rem;
     text-transform: none;
 }
 

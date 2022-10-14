@@ -27,11 +27,13 @@
                         <div class="location">
                             <div>
                                 <label class="auth" for="zipcode">Zip Code</label>
-                                <input class="auth" type="tel" id="zipcode" placeholder="eg. 92111" pattern="\d{4,10}">
+                                <input class="auth" type="tel" id="zipcode" placeholder="eg. 92111" pattern="\d{4,10}"
+                                title="Please enter a valid zip code in the following format: eg. 92078" required>
                             </div>
                             <div>
                                 <label class="auth" for="countrycode">Country Code</label>
-                                <input class="auth" type="text" id="countrycode" placeholder="eg. US">
+                                <input class="auth" type="text" id="countrycode" placeholder="eg. US" pattern="[A-Z]{2,2}"
+                                title="Please enter a valid country code in the following format: eg. MX" required>
                             </div>
                         </div>
                         <div class="api-keys">
