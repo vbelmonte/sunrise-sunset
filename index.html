@@ -11,6 +11,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Oswald&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div class="authorization-bg">
+        </div>
         <header>
             <h1>Sunrise/Sunset Times</h1>
         </header>
@@ -26,24 +28,32 @@
                     <form>
                         <div class="location">
                             <div>
-                                <label class="auth" for="zipcode">Zip Code</label>
+                                <div class="auth">
+                                    <label class="auth" for="zipcode">Zip Code</label><span class="auth">required</span>
+                                </div>
                                 <input class="auth" type="tel" id="zipcode" placeholder="eg. 92111" pattern="\d{4,10}"
                                 title="Please enter a valid zip code in the following format: eg. 92078" required>
                             </div>
                             <div>
-                                <label class="auth" for="countrycode">Country Code</label>
+                                <div class="auth">
+                                    <label class="auth" for="countrycode">Country Code</label><span class="auth">required</span>
+                                </div>
                                 <input class="auth" type="text" id="countrycode" placeholder="eg. US" pattern="[A-Z]{2,2}"
                                 title="Please enter a valid country code in the following format: eg. MX" required>
                             </div>
                         </div>
                         <div class="api-keys">
-                            <label class="auth" for="openweather">OpenWeather API Key</label>
-                            <input class="auth" type="text" id="openweather">
-                            <label class="auth" for="timezonedb">TimeZoneDB API Key</label>
-                            <input class="auth" type="text" id="timezonedb">
+                            <div class="auth">
+                                <label class="auth" for="openweather">OpenWeather API Key</label><span class="auth">required</span>
+                            </div>
+                            <input class="auth" type="text" id="openweather" required>
+                            <div class="auth">
+                                <label class="auth" for="timezonedb">TimeZoneDB API Key</label><span class="auth">required</span>
+                            </div>
+                            <input class="auth" type="text" id="timezonedb" required>
                         </div>
                         <div class="submit">
-                            <button type="button" class="auth" onclick="authorize()">Submit</button>
+                            <button type="button" class="auth auth-btn" onclick="authorize()">Submit</button>
                         </div>
                     </form>
                 </div>

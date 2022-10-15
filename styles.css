@@ -7,7 +7,33 @@ body {
     font-size: 14px;
     font-weight: 300;
     color: white;
+    -webkit-transition: all 4s linear;
+    -moz-transition: all 4s linear;
+    -o-transition: all 4s linear;
+    transition: all 4s linear;
 }
+
+    .authorization-bg {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: rgba(7,7,7);
+    opacity: 1;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+/*body.main {
+    background: linear-gradient(30deg, rgba(241,107,64,1), rgba(241,107,64,0) 90%),
+    linear-gradient(320deg, rgb(214,200,80,1), rgb(214,200,80,0) 50%),
+    linear-gradient(180deg, rgb(203,103,133,1), rgb(203,103,133,0) 100%);
+}*/
 
 header {
     padding: 25px 100px;
@@ -143,7 +169,7 @@ input {
     padding: 8px 5px;
 }
 
-.auth {
+input.auth, button.auth {
     width: 100%;
 }
 
@@ -163,19 +189,26 @@ button.auth:hover {
 }
 
 label.auth {
-    display: block;
-    padding: 4px 0px;
     font-weight: 500;
     font-size: 0.8rem;
 }
 
-input.auth {
-    margin-bottom: 10px;
+span.auth {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0px 4px;
+    background-color: white;
+    color: black;
 }
 
-input:focus-visible {
-    outline: solid 1px blue;
-    border: solid 1px blue;
+div.auth {
+    padding: 5px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input.auth {
+    margin-bottom: 10px;
 }
 
 input::placeholder {
@@ -185,8 +218,14 @@ input::placeholder {
 }
 
 input:invalid {
-    outline: solid 2px red;
-    border: none;
+    outline: solid 1px red;
+    border: solid 1px red;
+}
+
+input:focus-visible {
+    border-radius: 0px;
+    border: solid 1px blue;
+    outline: solid 1px blue;
 }
 
 #location {

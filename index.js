@@ -135,14 +135,14 @@ function getTimeZone() {
 function authorize() {
     let authorizationWindow = document.getElementsByClassName("authorization");
     authorizationWindow[0].style.opacity = 0;
-    setTimeout(hideAuthorizationWindow, 1000);
-    setTimeout(displayDashboard, 1500);
+    setTimeout(hideAuthorizationWindow, 300);
+    setTimeout(displayDashboard, 400);
 }
 
 function displayDashboard() {
     let dashboard = document.getElementsByClassName("main-info");
     dashboard[0].style.display = "block";
-    setTimeout(displayDashboardOpacity, 500);
+    setTimeout(displayDashboardOpacity, 200);
     /*dashboard[0].style.opacity = 1;*/
 }
 
@@ -156,6 +156,12 @@ function hideAuthorizationWindow() {
     authorizationWindow[0].style.display = "none";
 }
 
+
+document.querySelector(".auth-btn").addEventListener('click', function() {
+   let test = document.getElementsByClassName("authorization-bg");
+   test[0].style.opacity = 0;
+   /*document.querySelector("body").classList.toggle("authorization-bg");*/
+});
 
 
 
